@@ -1,0 +1,131 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="locale">
+
+    <!-- The free icons container (Drag & Drop) -->
+    <FrameLayout
+        android:id="@+id/desktop_icons_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- The start-service button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/service_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/lets_start" />
+
+
+    <!-- Yuji DEX Windows-inspired shell: compact taskbar + searchable Start menu. -->
+    <LinearLayout
+        android:id="@+id/yuji_taskbar"
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
+        android:layout_gravity="bottom|start"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="14dp"
+        android:background="@drawable/yuji_taskbar_background"
+        android:elevation="18dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/start_menu_toggle"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:contentDescription="@string/yuji_start_menu"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:padding="8dp"
+            android:text="⊞"
+            android:textColor="#FFFFFFFF"
+            android:textSize="25sp"
+            app:backgroundTint="#2563EB" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="Yuji DEX"
+            android:textColor="#FFFFFFFF"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/start_menu_panel"
+        android:layout_width="match_parent"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_height="480dp"
+        android:layout_gravity="bottom|start"
+        android:layout_marginBottom="76dp"
+        android:background="@drawable/yuji_start_menu_background"
+        android:elevation="24dp"
+        android:orientation="vertical"
+        android:padding="18dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Yuji DEX"
+            android:textColor="#FFFFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/start_menu_search"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/yuji_start_search_background"
+            android:hint="@string/yuji_search_apps"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:singleLine="true"
+            android:textColor="#FFFFFFFF"
+            android:textColorHint="#FFB8C0CC" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/yuji_all_apps"
+            android:textColor="#FFE5E7EB"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:id="@+id/start_menu_apps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/yuji_phase1_preview"
+            android:textColor="#FF9CA3AF"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+</FrameLayout>

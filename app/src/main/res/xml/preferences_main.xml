@@ -1,0 +1,75 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" 
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.yuji.dex.x.preferences.PreferenceHeader
+		android:key="lw_open_gallery"
+		android:icon="@drawable/ic_movie"
+		android:title="@string/lw_section_title" />
+
+    <com.yuji.dex.x.preferences.PreferenceHeader
+		android:icon="@drawable/ic_appearance"
+		android:title="@string/appearance" 
+		app:fragment="com.yuji.dex.x.fragments.AppearancePreferences" />
+    
+
+    <com.yuji.dex.x.preferences.PreferenceHeader
+		android:icon="@drawable/ic_apps_menu" 
+		app:fragment="com.yuji.dex.x.fragments.AppMenuPreferences" 
+		android:title="@string/app_menu"  />
+	<com.yuji.dex.x.preferences.PreferenceHeader
+        android:icon="@drawable/ic_dock"
+        android:fragment="com.yuji.dex.x.fragments.DockPreferences"
+        android:title="@string/dock" />
+    <com.yuji.dex.x.preferences.PreferenceHeader
+        android:icon="@drawable/ic_star"
+        android:fragment="com.yuji.dex.x.fragments.DefaultAppsPreferences"
+        android:title="@string/default_apps" />
+    <com.yuji.dex.x.preferences.PreferenceHeader
+        android:icon="@drawable/ic_keyboard"
+        android:fragment="com.yuji.dex.x.fragments.KeyboardPreferences"
+        android:title="@string/keyboard" />
+	<com.yuji.dex.x.preferences.PreferenceHeader
+        android:icon="@drawable/ic_corners"
+        android:fragment="com.yuji.dex.x.fragments.HotCornersPreferences"
+        android:title="@string/hot_corners" />
+	<com.yuji.dex.x.preferences.PreferenceHeader
+        android:icon="@drawable/ic_notifications"
+        android:fragment="com.yuji.dex.x.fragments.NotificationPreferences"
+        android:title="@string/notifications" />
+    <com.yuji.dex.x.preferences.PreferenceHeader
+        android:icon="@drawable/ic_sounds"
+        android:fragment="com.yuji.dex.x.fragments.SoundsPreferences"
+        android:title="@string/sounds" />
+    <com.yuji.dex.x.preferences.PreferenceHeader
+        android:icon="@drawable/ic_user"
+        app:fragment="com.yuji.dex.x.fragments.MultiUserFragment"
+        android:title="@string/multi_user" />
+    <com.yuji.dex.x.preferences.PreferenceHeader
+        android:icon="@drawable/ic_plugin"
+        app:fragment="com.yuji.dex.x.fragments.PluginsFragment"
+        android:title="@string/plugins" />
+    <com.yuji.dex.x.preferences.PreferenceHeader
+        android:icon="@drawable/ic_search"
+        app:fragment="com.yuji.dex.x.fragments.WorkshopFragment"
+        android:title="@string/workshop_title" />
+    <com.yuji.dex.x.preferences.PreferenceHeader
+        android:icon="@drawable/ic_advanced"
+        android:fragment="com.yuji.dex.x.fragments.AdvancedPreferences"
+        android:title="@string/advanced" />
+    <!-- Hidden until Developer Mode is unlocked (7 taps on the version
+         number in Help & About — see HelpAboutPreferences.handleVersionTap).
+         Visibility toggled in PreferencesFragment.refreshBetaVisibility(),
+         which reads the same "developer_mode_enabled" flag that unlock
+         sets. -->
+    <com.yuji.dex.x.preferences.PreferenceHeader
+        android:key="beta_preview"
+        android:icon="@drawable/ic_beta"
+        android:fragment="com.yuji.dex.x.fragments.BetaPreferences"
+        android:title="@string/beta"
+        app:isPreferenceVisible="false" />
+    <com.yuji.dex.x.preferences.PreferenceHeader
+        android:icon="@drawable/ic_info"
+        android:fragment="com.yuji.dex.x.fragments.HelpAboutPreferences"
+        android:title="@string/help_and_about" />
+
+</PreferenceScreen>
